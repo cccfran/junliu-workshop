@@ -1,2 +1,2 @@
-# Jun's 60 website
+# Jun's workshop website
 
