@@ -89,7 +89,7 @@ canonical: https://heliumjk.github.io
                   </div> -->
                   <br>
                   <a target="_blank" href="https://forms.gle/wMvKawqwQcBJDyR68" class="btn std-btn btn-warning animated fadeInUp">Upload Portrait/Video/Photo</a>
-                  <a target="_blank" href="#parking" class="btn std-btn btn-info animated fadeInUp">Parking (Coming Soon)</a>
+                  <a href="#parking" class="btn std-btn btn-info animated fadeInUp">Parking</a>
 
                   <!-- <a href="" class="btn std-btn btn-info btn-common animated fadeInUp">More Later</a> -->
 
@@ -101,8 +101,8 @@ canonical: https://heliumjk.github.io
                   <h5 class="header-title animated fadeIn text-warning">Important Notice</h5>
                   <br>
                   <p class="header-text animated fadeIn" style="margin-top:-5px">1. <b>Call for Contributions</b>: As part of the workshop celebration, we warmly invite all attendees to contribute to a tribute honoring Jun. You are welcome to submit a portrait, a short video, event photos, or a short message. These contributions will be compiled into a collective tribute to be shared during the event. If you have already submitted your materials, there is no need to resubmit. We look forward to celebrating Jun’s impact together through your voices, faces, and stories.</p>
-                  <p class="header-text animated fadeIn" style="margin-top:-5px">2. <b>Parking</b>: Block parking will be available and details will be announced soon.</p>
-                  <p class="header-text animated fadeIn" style="margin-top:-5px">3. <b>WiFi</b>: Choose <i>Harvard University</i> (no password needed); then register <a target="_blank" href="https://getonline.harvard.edu/" style="text-decoration: underline;">here</a> as a guest.</p>
+                  <p class="header-text animated fadeIn" style="margin-top:-5px">2. <b>Parking</b>: Come-and-go block parking will be available <a href="#parking" class="text-info" style="text-decoration: underline;">here</a>.</p>
+                  <p class="header-text animated fadeIn" style="margin-top:-5px">3. <b>WiFi</b>: Choose <i>Harvard University</i> (no password needed); then register <a class="text-info" target="_blank" href="https://getonline.harvard.edu/" style="text-decoration: underline;">here</a> as a guest.</p>
 
                   </div>
                   </div>
@@ -166,6 +166,7 @@ canonical: https://heliumjk.github.io
           <h3 class="heading-title text-center">July 28</h3>
         </div>
         <div class="mb-40"></div>
+        <p class="lead text-center text-info"><b><a target="_blank" href="https://maps.app.goo.gl/nt2PvWYgvUMMJYgi7" class="address">  Science and Engineering Complex<br>150 Western Ave, Boston</a></b></p>
 
         <!-- accordions -->
         <div class="row justify-content-center">
@@ -174,15 +175,284 @@ canonical: https://heliumjk.github.io
             <div class="panel-group">
               <div class="panel">
                 <div class="panel-heading">
-                  <a class="panel-title collapsed" data-toggle="collapse" href="#panel1">9:00AM - 4:30PM <span style="font-weight: normal;padding-left: 20px;">WORKSHOP @ WINOKUR HALL, SCIENCE & ENGINEERING COMPLEX</span></a>
+                  <a class="panel-title" data-toggle="collapse" href="#panel1">9:00 - 11:30AM <span style="font-weight: normal;padding-left: 20px;">WORKSHOP @ WINOKUR HALL</span></a>
                 </div>
                 <div id="panel1" class="panel-collapse collapse show">
                   <div class="panel-body">
-                    <p class="lead text-center text-info"><b><a target="_blank" href="https://maps.app.goo.gl/nt2PvWYgvUMMJYgi7" class="address">  Science and Engineering Complex<br>150 Western Ave, Boston</a></b></p>
-                    <p class="lead text-center"> Coming Soon! </p>
+                    <p class="lead text-center">Breakfast & Coffee Break @ West Atrium <br> Workshop @ Winokur Hall </p>
+                    <div class="table-responsive mtb">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th class="text-center">Time</th>
+                            <th class="text-center">Speaker</th>
+                            <th class="text-center">Title<br>(Click to Abstract)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% assign speakers = site.data.speakers | sort: 'id' %}
+                          {% for sp in speakers %}
+                          {% if sp.id < 11 %}
+                          {% if sp.title == "Welcome" or sp.title == "Lunch" or sp.title == "Break" or sp.title == "Breakfast" or sp.title == "Lunch, Group Photo" %}
+                          <tr>
+                            <td>{{ sp.time }}
+                            <td></td>
+                            <td>{{ sp.title }}</td>
+                          </tr>
+                          {% elsif sp.info contains "session" %}
+                          <tr>
+                            <td>{{ sp.time }}</td>
+                            <td>
+                              <i>Chair</i>: <a href="{{sp.url}}" target="_blank"><b>{{ sp.first }} {{ sp.last }}</b></a><br>{{ sp.ins }}<br>
+                              <i>Organizer</i>: <a><b>{{ sp.organizer }}</b></a>
+                              
+                            </td>
+                            <td style="vertical-align: middle;"><b>{{ sp.title }}</b></td>
+                          </tr>
+                          {% else %}
+                          <tr>
+                            <td>{{ sp.time }}
+                            <td><a href="{{sp.url}}" target="_blank"><b>{{ sp.first }} {{ sp.last }}</b></a><br>{{ sp.ins }}</td>
+                            <td style="vertical-align: middle;"><a data-toggle="modal" data-target="#{{sp.id}}"><b>{{ sp.title }}</b></a>
+                              <!-- Modal -->
+                              <div class="modal fade" id="{{sp.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">{{ sp.title }}</h5>
+                                      <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button> -->
+                                    </div>
+                                    <div class="modal-body">
+                                      <br>
+                                      <p class="lead"><span class="bg-primary">{{ sp.first }} {{ sp.last }}</span></p>
+                                      <p>{{ sp.ins }}</p>
+                                      <br>
+                                      <p>
+                                      {{ sp.abstract }}
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- End modal -->
+                            </td>
+                          </tr>
+                          {% endif %}
+                          {% endif %}
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- end table -->
                   </div>
                 </div>
               </div>
+              <!-- END Panel 1 -->
+
+              <!-- Panel 2 -->
+              <div class="panel">
+                <div class="panel-heading">
+                  <a class="panel-title collapsed" data-toggle="collapse" href="#panel2">1:00 - 12:50PM <span style="font-weight: normal;padding-left: 20px;">LUNCH, GROUP PHOTO & LIGHTING TALKS @ WINOKUR HALL</span></a>
+                </div>
+                <div id="panel2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p class="lead text-center">Lunch @ West Atrium <br> Lighting Talks @ Winokur Hall </p>
+                    <div class="table-responsive mtb">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th class="text-center">Time</th>
+                            <th class="text-center">Speaker</th>
+                            <th class="text-center">Title<br>(Click to Abstract)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% assign speakers = site.data.speakers | sort: 'id' %}
+                          {% for sp in speakers %}
+                          {% if sp.id < 13 and sp.id >= 11 %}
+                          {% assign modal_id = sp.id | replace: ".", "-" %}
+                          {% if sp.title == "Welcome" or sp.title == "Lunch" or sp.title == "Break" or sp.title == "Breakfast" or sp.title == "Lunch, Group Photo" %}
+                          <tr>
+                            <td>{{ sp.time }}
+                            <td></td>
+                            <td>{{ sp.title }}</td>
+                          </tr>
+                          {% elsif sp.info contains "session" %}
+                          <tr>
+                            <td>{{ sp.time }}</td>
+                            <td>
+                              <i>Chair</i>: <a href="{{sp.url}}" target="_blank"><b>{{ sp.first }} {{ sp.last }}</b></a><br>{{ sp.ins }}<br>
+                              {% if sp.organizer %} 
+                              <i>Organizer</i>: <a><b>{{ sp.organizer }}</b></a>
+                              {% endif %}
+                              
+                            </td>
+                            <td style="vertical-align: middle;"><b>{{ sp.title }}</b></td>
+                          </tr>
+                          {% else %}
+                          <tr>
+                            <td>{{ sp.time }}
+                            <td><a href="{{sp.url}}" target="_blank"><b>{{ sp.first }} {{ sp.last }}</b></a><br>{{ sp.ins }}</td>
+                            <td style="vertical-align: middle;"><a data-toggle="modal" data-target="#{{ modal_id }}"><b>{{ sp.title }}</b></a>
+                              <!-- Modal -->
+                              <div class="modal fade" id="{{ modal_id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">{{ sp.title }}</h5>
+                                      <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button> -->
+                                    </div>
+                                    <div class="modal-body">
+                                      <br>
+                                      <p class="lead"><span class="bg-primary">{{ sp.first }} {{ sp.last }}</span></p>
+                                      <p>{{ sp.ins }}</p>
+                                      <br>
+                                      <p>
+                                      {{ sp.abstract }}
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- End modal -->
+                            </td>
+                          </tr>
+                          {% endif %}
+                          {% endif %}
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- end table -->
+                  </div>
+                </div>
+              </div>
+              <!-- END Panel 2 -->
+
+              <!-- Panel 3 -->
+              <div class="panel">
+                <div class="panel-heading">
+                  <a class="panel-title" data-toggle="collapse" href="#panel3">1:00 - 4:30PM <span style="font-weight: normal;padding-left: 20px;">WORKSHOP @ WINOKUR HALL</span></a>
+                </div>
+                <div id="panel3" class="panel-collapse collapse show">
+                  <div class="panel-body">
+                    <p class="lead text-center">Breakfast & Coffee Break @ West Atrium <br> Workshop @ Winokur Hall </p>
+                    <div class="table-responsive mtb">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th class="text-center">Time</th>
+                            <th class="text-center">Speaker</th>
+                            <th class="text-center">Title<br>(Click to Abstract)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% assign speakers = site.data.speakers | sort: 'id' %}
+                          {% for sp in speakers %}
+                          {% if sp.id >= 13 %}
+                          {% if sp.title == "Welcome" or sp.title == "Lunch" or sp.title == "Break" or sp.title == "Breakfast" or sp.title == "Lunch, Group Photo" %}
+                          <tr>
+                            <td>{{ sp.time }}
+                            <td></td>
+                            <td>{{ sp.title }}</td>
+                          </tr>
+                          {% elsif sp.info contains "session" %}
+                          <tr>
+                            <td>{{ sp.time }}</td>
+                            <td>
+                              <i>Chair</i>: <a href="{{sp.url}}" target="_blank"><b>{{ sp.first }} {{ sp.last }}</b></a><br>{{ sp.ins }}<br>
+                              {% if sp.organizer %} 
+                              <i>Organizer</i>: <a><b>{{ sp.organizer }}</b></a>
+                              {% endif %}
+                              
+                            </td>
+                            <td style="vertical-align: middle;"><b>{{ sp.title }}</b></td>
+                          </tr>
+                          {% elsif sp.info == "panel" %}
+                          <tr>
+                            <td>{{ sp.time }}</td>
+                            <td>{{ sp.speaker }}</td>
+                            <td>
+                              <table style="width: 100%; border-collapse: collapse; border: none;">
+                                {% assign total = sp.panelist | size %}
+                                {% for p in sp.panelist %}
+                                  {% assign i = forloop.index0 %}
+                                  {% assign mod = i | modulo: 2 %}
+                                  {% if mod == 0 %}
+                                    <tr>
+                                  {% endif %}
+                                  <td style="vertical-align: top; padding: 4px 15px 4px 0; width: 50%; border: none;">
+                                    {% if sp.urls[i] != "" %}
+                                      <a href="{{ sp.urls[i] }}" target="_blank"><b>{{ p }}</b></a>
+                                    {% else %}
+                                      {{ p }}
+                                    {% endif %}
+                                    <br>
+                                    {% if sp.inss[i] != "" %}
+                                      <span class="text-muted">{{ sp.inss[i] }}</span>
+                                    {% endif %}
+                                  </td>
+                                  {% if mod == 1 or forloop.last %}
+                                    </tr>
+                                  {% endif %}
+                                {% endfor %}
+                              </table>
+                            </td>
+                          </tr>
+                          {% else %}
+                          <tr>
+                            <td>{{ sp.time }}
+                            <td><a href="{{sp.url}}" target="_blank"><b>{{ sp.first }} {{ sp.last }}</b></a><br>{{ sp.ins }}</td>
+                            <td style="vertical-align: middle;"><a data-toggle="modal" data-target="#{{sp.id}}"><b>{{ sp.title }}</b></a>
+                              <!-- Modal -->
+                              <div class="modal fade" id="{{sp.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">{{ sp.title }}</h5>
+                                      <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button> -->
+                                    </div>
+                                    <div class="modal-body">
+                                      <br>
+                                      <p class="lead"><span class="bg-primary">{{ sp.first }} {{ sp.last }}</span></p>
+                                      <p>{{ sp.ins }}</p>
+                                      <br>
+                                      <p>
+                                      {{ sp.abstract }}
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- End modal -->
+                            </td>
+                          </tr>
+                          {% endif %}
+                          {% endif %}
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- end table -->
+                  </div>
+                </div>
+              </div>
+              <!-- END Panel 3 -->
             </div>
           </div>
         </div>
@@ -246,7 +516,17 @@ canonical: https://heliumjk.github.io
                 </table>
                 <div class="row-spacer"></div>
                 <h3 id="parking">Parking</h3>
-                <p>(Parking information coming soon!)</p>
+                <p>FREE block parking 8:30am to 5:00pm. 5-min walk to SEC. <br> (Please park in a spot designated for event parking.)</p>
+                <table class="table">
+                  <tr  class="no-top-border">
+                    <th>Lot 1</th>
+                    <th>Lot 2</th>
+                  </tr>
+                  <tr>
+                    <th><a target="_blank" href="https://maps.app.goo.gl/fXEhHba5cigY8Uig6">2 Hague St. Parking Lot</a></th>
+                    <th><a target="_blank" href="https://maps.app.goo.gl/zb7hhQzAXV6SJAYZA">114 Western Ave, Boston</a></th>
+                  </tr>
+                </table>
               </div>
               <div class="row-spacer"></div>
             </div>
