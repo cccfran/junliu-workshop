@@ -195,7 +195,7 @@ canonical: https://heliumjk.github.io
                           {% if sp.id < 11 %}
                           {% if sp.title == "Welcome" or sp.title == "Lunch" or sp.title == "Break" or sp.title == "Breakfast" or sp.title == "Lunch, Group Photo" %}
                           <tr>
-                            <td>{{ sp.time }}
+                            <td>{{ sp.time }}</td>
                             <td></td>
                             <td>{{ sp.title }}</td>
                           </tr>
@@ -211,7 +211,7 @@ canonical: https://heliumjk.github.io
                           </tr>
                           {% else %}
                           <tr>
-                            <td>{{ sp.time }}
+                            <td>{{ sp.time }}</td>
                             <td><a href="{{sp.url}}" target="_blank"><b>{{ sp.first }} {{ sp.last }}</b></a><br>{{ sp.ins }}</td>
                             <td style="vertical-align: middle;"><a data-toggle="modal" data-target="#{{sp.id}}"><b>{{ sp.title }}</b></a>
                               <!-- Modal -->
@@ -278,7 +278,7 @@ canonical: https://heliumjk.github.io
                           {% assign modal_id = sp.id | replace: ".", "-" %}
                           {% if sp.title == "Welcome" or sp.title == "Lunch" or sp.title == "Break" or sp.title == "Breakfast" or sp.title == "Lunch, Group Photo" %}
                           <tr>
-                            <td>{{ sp.time }}
+                            <td>{{ sp.time }}</td>
                             <td></td>
                             <td>{{ sp.title }}</td>
                           </tr>
@@ -296,7 +296,7 @@ canonical: https://heliumjk.github.io
                           </tr>
                           {% else %}
                           <tr>
-                            <td>{{ sp.time }}
+                            <td>{{ sp.time }}</td>
                             <td><a href="{{sp.url}}" target="_blank"><b>{{ sp.first }} {{ sp.last }}</b></a><br>{{ sp.ins }}</td>
                             <td style="vertical-align: middle;"><a data-toggle="modal" data-target="#{{ modal_id }}"><b>{{ sp.title }}</b></a>
                               <!-- Modal -->
@@ -398,7 +398,7 @@ canonical: https://heliumjk.github.io
                                       {{ p }}
                                     {% endif %}
                                     <br>
-                                    {% if sp.inss[i] != "" %}
+                                    {% if sp.inss[i] %}
                                       <span class="text-muted">{{ sp.inss[i] }}</span>
                                     {% endif %}
                                   </td>
@@ -411,7 +411,7 @@ canonical: https://heliumjk.github.io
                           </tr>
                           {% else %}
                           <tr>
-                            <td>{{ sp.time }}
+                            <td>{{ sp.time }}</td>
                             <td><a href="{{sp.url}}" target="_blank"><b>{{ sp.first }} {{ sp.last }}</b></a><br>{{ sp.ins }}</td>
                             <td style="vertical-align: middle;"><a data-toggle="modal" data-target="#{{sp.id}}"><b>{{ sp.title }}</b></a>
                               <!-- Modal -->

@@ -36,7 +36,7 @@
     "title": "Latent Thought Language Models with<br> Variational Bayes Inference-Time Computation",
     "abstract": "We propose a novel class of language models, Latent Thought Models (LTMs), which incorporate explicit latent thought vectors that follow an explicit prior model in latent space. These latent thought vectors guide the autoregressive generation of ground tokens through a Transformer decoder. Training employs a dual-rate optimization process within the classical variational Bayes framework. Empirical studies reveal that LTMs possess additional scaling dimensions beyond traditional Large Language Models (LLMs), such as the number of iterations in inference-time computation and number of latent thought vectors. Higher sample efficiency can be achieved by increasing training compute per token, with further gains possible by trading model size for more inference steps. Designed based on these scaling properties, LTMs demonstrate superior sample and parameter efficiency compared to autoregressive models and discrete diffusion models. They significantly outperform these counterparts in validation perplexity and zero-shot language modeling tasks. Additionally, LTMs exhibit emergent few-shot in-context reasoning capabilities that scale with model size, and achieve competitive performance in conditional and unconditional text generation. <br><br> The project page is available at <a href=\"https://deqiankong.github.io/blogs/ltm\">https://deqiankong.github.io/blogs/ltm</a>. This is a collaboration between UCLA and Lambda.",
     "ins": "University of California, <br> Los Angeles",
-    "url": "http://www.stat.ucla.edu/~ywuu/"
+    "url": "http://www.stat.ucla.edu/~ywu/"
   },
   {
     "id": 4,
@@ -101,9 +101,9 @@
     "first": "Shirley",
     "last": "Liu",
     "title": "AI-driven Next-generation Cancer Biotherapeutics",
-    "abstract": "Abstract: GV20 Therapeutics is a clinical-stage, AI-driven biotherapeutics company focused on next-generation cancer treatments. The company’s lead program in development as a potential cancer immunotherapy is GV20-0251—a monoclonal antibody targeting the novel immune checkpoint IGSF8. It is the first AI-designed antibody against an AI-predicted target to enter clinical trials for treating advanced solid tumors. GV20’s proprietary STEAD AI platform enabled the program to advance from target discovery to investigational new drug (IND) approval in just three years, with early clinical data showing a favorable safety profile and promising efficacy in patients with advanced metastatic cancer.",
+    "abstract": "GV20 Therapeutics is a clinical-stage, AI-driven biotherapeutics company focused on next-generation cancer treatments. The company’s lead program in development as a potential cancer immunotherapy is GV20-0251—a monoclonal antibody targeting the novel immune checkpoint IGSF8. It is the first AI-designed antibody against an AI-predicted target to enter clinical trials for treating advanced solid tumors. GV20’s proprietary STEAD AI platform enabled the program to advance from target discovery to investigational new drug (IND) approval in just three years, with early clinical data showing a favorable safety profile and promising efficacy in patients with advanced metastatic cancer.",
     "ins": "GV20 Therapeutics / <br> Dana-Farber Cancer Institute",
-    "url": "https://www.dfhcc.harvard.edu/insider/member-detail/member/yuan-shirley-liu-phd/"
+    "url": "https://liulab-dfci.github.io"
   },
   {
     "id": 11,
@@ -315,7 +315,7 @@
     "first": "Mayetri",
     "last": "Gupta",
     "ins": "University of Glasgow",
-    "title": "Bayesian hierarchical latent variable-based modelling for large and complex genomic datasets",
+    "title": "Bayesian Hierarchical Latent Variable-based Modelling <br> for Large and Complex Genomic Datasets",
     "abstract": "Advances in genomic sequencing technologies in the past few decades have opened up the possibility of making previously unthinkable biological discoveries at extremely high resolution- but have led to numerous challenging problems in how to sensibly and accurately analyse the generated data. These data are typically of huge dimension and/or large volumes; may be discrete in nature; are subject to various artefacts; and their distributions exhibit non-standard features, such as long-ranging correlations, non-ellipsoidal shapes, skewness and multimodality- which may cause difficulties in making successful inference through usual statistical modelling approaches. In this lightning talk, I will highlight some recent examples of work from our group where detail-oriented Bayesian modelling coupled with robust, efficient and powerful Monte Carlo-based computational methods enabled useful inference and meaningful biological discoveries. These include (i) clustering high volumes of non-ellipsoidal data from genotype sequencing experiments; (ii) detecting differential epigenetic profiles from high-throughput DNA methylation data and (iii) discovering groups of genetic variants associated with complex phenotypic traits in humans. This talk is based on joint work with Edoardo Redivo, Hien D. Nguyen, Huizi Zhang, Ben Swallow, Tushar Ghosh, Lanxin Li, Vincent Macaulay, Peter D. Adams, members of the Framingham Bone research consortium and the BHF Institute of Cardiovascular & Medical Sciences at Glasgow.",
     "url": "https://www.maths.gla.ac.uk/~mgupta/"
   }
