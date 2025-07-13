@@ -204,7 +204,9 @@ canonical: https://heliumjk.github.io
                             <td>{{ sp.time }}</td>
                             <td>
                               <i>Chair</i>: <a href="{{sp.url}}" target="_blank"><b>{{ sp.first }} {{ sp.last }}</b></a><br>{{ sp.ins }}<br>
+                              {% if sp.organizer %} 
                               <i>Organizer</i>: <a><b>{{ sp.organizer }}</b></a>
+                              {% endif %}
                               
                             </td>
                             <td style="vertical-align: middle;"><b>{{ sp.title }}</b></td>
