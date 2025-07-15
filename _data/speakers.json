@@ -325,7 +325,7 @@
     "first": "Scott",
     "last": "Schmidler",
     "ins": "Duke University",
-    "title": "Bayesian Inference for Site-Dependent Evolutionary Models:  Applications to Vaccine Design",
+    "title": "Bayesian Inference for Site-Dependent Evolutionary Models: <br>  Applications to Vaccine Design",
     "abstract": "A major challenge in vaccine design is the elicitation of broadly-neutralizing antibodies (bnAbs) that protect against viral escape. Stochastic models of affinity maturation play a critical role in understanding barriers to success and guiding novel design strategies.  A key difficulty is phylogenetic inference in the presence of site-dependent evolutionary processes, a long-standing challenge in computational biology.  We describe a sequential Monte Carlo algorithm for approximating marginal sequence likelihoods under site-dependence and provide finite sample bounds on the approximation error.  We extend this to a combined data-augmentation and importance sampling scheme for approximating posterior probabilities of phylogenetic trees and reconstructing ancestral sequences under site-dependent models of molecular evolution. We apply this approach to reconstruct maturation lineages from high-throughput B cell receptor repertoire sequencing data, and demonstrate the impact of accounting for context-dependence on reconstruction accuracy. We then apply our models to the problem of choosing targets for the design of boosting immunogens aimed at elicitation of bnAbs for HIV.",
     "url": "http://www2.stat.duke.edu/~scs/"
   }
