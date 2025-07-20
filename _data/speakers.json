@@ -212,19 +212,19 @@
     "id": 20,
     "info": "panel",
     "panelist": [
+    "Bo Jiang", 
     "Xiao-Li Meng",
-    "Susan Murphy",
     "Jamie Robins",
     "Yuan Yuan"
   ],
   "urls": [
+    "https://www.linkedin.com/in/bo-jiang-54b04125/",
     "https://statistics.fas.harvard.edu/people/xiao-li-meng",
-    "https://statistics.fas.harvard.edu/people/susan-murphy",
     "https://hsph.harvard.edu/profile/james-m-robins/",
     "https://sites.google.com/site/danioyuan/Home"
   ],
   "inss": [
-    "Harvard University",
+    "Two Sigma",
     "Harvard University",
     "Harvard University",
     "Google"
