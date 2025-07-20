@@ -60,6 +60,16 @@
   },
   {
     "id": 6,
+    "time": "",
+    "first": "Ke",
+    "last": "Deng",
+    "title": "Integrating Statistical Learning and Deep Learning for Interpretable Analysis of Complex Unstructured Data",
+    "abstract": "The great success of large deep learning models in various applications in recent years have encouraged many researchers to seek improved performance by utilizing larger models and bigger data in practical problems involving unstructured data, leading to psychological implications to pursuit large models everywhere. However, the fundamental principle of statistical modelling tells us that an over-flexible large model without a clear focus on unique features of the problem of interest would often lead to inefficient utilization of data and sub-optimal results. In this talk, I will provide a few examples in analyzing complex unstructured data, including texts, videos and multimodal data, that deep learning can be greatly enhanced by statical learning once we integrate them wisely. We hope these examples could inspire more research efforts on developing advanced statistical approaches with competitive performance and transparent interpretation for analyzing complex unstructured data on top of deep learning.",
+    "ins": "Tsinghua University",
+    "url": "https://www.kdeng.stat.tsinghua.edu.cn/en/"
+  },
+  {
+    "id": 6.5,
     "time": "10:10–10:30am",
     "title": "Break"
   },
