@@ -9,7 +9,7 @@
   {
     "id": 1,
     "time": "9:00am",
-    "info": "session",
+    "info": "remark",
     "first": "Samuel",
     "last": "Kou",
     "title": "Opening Remarks",
@@ -233,7 +233,7 @@
   {
     "id": 21,
     "time": "4:15pm",
-    "info": "session",
+    "info": "remark",
     "first": "Xihong",
     "last": "Lin",
     "title": "Closing Remarks",
