@@ -217,10 +217,6 @@ canonical: https://heliumjk.github.io
                             <td>{{ sp.time }}</td>
                             <td>
                               <a href="{{sp.url}}" target="_blank"><b>{{ sp.first }} {{ sp.last }}</b></a><br>{{ sp.ins }}<br>
-                              {% if sp.organizer %} 
-                              <i>Organizer</i>: <a><b>{{ sp.organizer }}</b></a>
-                              {% endif %}
-                              
                             </td>
                             <td style="vertical-align: middle;"><b>{{ sp.title }}</b></td>
                           </tr>
@@ -381,7 +377,7 @@ canonical: https://heliumjk.github.io
                             <td></td>
                             <td>{{ sp.title }}</td>
                           </tr>
-                          {% elsif sp.info contains "session" %}
+                          {% elsif sp.info == "session" %}
                           <tr>
                             <td>{{ sp.time }}</td>
                             <td>
@@ -390,6 +386,17 @@ canonical: https://heliumjk.github.io
                               <i>Organizer</i>: <a><b>{{ sp.organizer }}</b></a>
                               {% endif %}
                               
+                            </td>
+                            <td style="vertical-align: middle;"><b>{{ sp.title }}</b></td>
+                          </tr>
+                          {% elsif sp.info == "sessionpanel" %}
+                          <tr>
+                            <td>{{ sp.time }}</td>
+                            <td>
+                              <i>Moderator</i>: <a href="{{sp.url}}" target="_blank"><b>{{ sp.first }} {{ sp.last }}</b></a><br>{{ sp.ins }}<br>
+                              {% if sp.organizer %} 
+                              <i>Organizer</i>: <a><b>{{ sp.organizer }}</b></a>
+                              {% endif %}
                             </td>
                             <td style="vertical-align: middle;"><b>{{ sp.title }}</b></td>
                           </tr>

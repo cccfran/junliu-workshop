@@ -200,13 +200,14 @@
   },
   {
     "id": 19,
-    "info": "session",
+    "info": "sessionpanel",
     "time": "3:30–4:15pm",
     "first": "Tianxi",
     "last": "Cai",
     "title": "Panel Discussion: <br> AI Meets Statistics — A Two-Way Power Boost",
     "url": "https://dbmi.hms.harvard.edu/people/tianxi-cai",
-    "ins": "Harvard University"
+    "ins": "Harvard University",
+    "organizer": "Tianxi Cai"
   },
   {
     "id": 20,
