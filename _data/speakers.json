@@ -20,12 +20,12 @@
     "id": 2,
     "time": "9:10–10:10am",
     "info": "session",
-    "first": "Rong",
-    "last": "Chen",
+    "first": "Xuming",
+    "last": "He",
     "title": "Bayesian-inspired Methods in AI and Statistics",
     "abstract": "",
-    "url": "https://stat.rutgers.edu/people-pages/faculty/people/371-rong-chen",
-    "ins": "Rurgers University",
+    "ins": "Washington University <br> in St. Louis",
+    "url": "https://sds.wustl.edu/people/xuming-he",
     "organizer": "Samuel Kou"
   },
   {
@@ -160,12 +160,12 @@
     "id": 15,
     "info": "session",
     "time": "2:30–3:30pm",
-    "first": "Xuming",
-    "last": "He",
+    "first": "Rong",
+    "last": "Chen",
     "title": "AI in Action: From Complex Data to Credible Discovery",
     "abstract": "",
-    "ins": "Washington University <br> in St. Louis",
-    "url": "https://sds.wustl.edu/people/xuming-he",
+    "url": "https://stat.rutgers.edu/people-pages/faculty/people/371-rong-chen",
+    "ins": "Rurgers University",
     "organizer": "Linda Zhao"
   },
   {
